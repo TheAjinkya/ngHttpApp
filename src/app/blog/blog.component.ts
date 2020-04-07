@@ -31,12 +31,12 @@ export class BlogComponent implements OnInit {
 
   onSubmit(form : NgForm){
     const data = form.value
-    // this.blogs.push(data)
+    this.blogs.push(data)
     console.log("formData", data)
-    this.http.post<{title: string, content : string}>('../../assets/data.json', data)
-    .subscribe((response)=>{
-      console.log("Post call response", response)
-    })
+    // this.http.post<{title: string, content : string}>('../../assets/data.json', data)
+    // .subscribe((response)=>{
+    //   console.log("Post call response", response)
+    // })
 
   }
 
@@ -48,6 +48,12 @@ export class BlogComponent implements OnInit {
       }
       console.log("blogs array", this.blogs)
     })
+  }
+
+  delete(num){
+    this.blogs.splice(num, 1)
+    console.log("this.blogs and deleted index ", this.blogs, num)
+
   }
 
 }

@@ -4,12 +4,17 @@ import {FormsModule} from '@angular/forms'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BlogComponent } from './blog/blog.component';
-import { HttpClientModule} from '@angular/common/http'
+import { HttpClientModule} from '@angular/common/http';
+import { RxjsComponent } from './rxjs/rxjs.component';
+import { HomeComponent } from './home/home.component'
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    BlogComponent
+    BlogComponent,
+    RxjsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

@@ -28,7 +28,7 @@
     <div class="panel panel-primary">
         <div class="panel-heading">Blogs</div>
         <div class="panel-body">
-            <div *ngFor="let data of blogs; index as i">
+            <div *ngFor="let data of myData; index as i">
                 {{data.title}} <br>
                 {{data.content}} 
                 <button class="btn" (click)="delete(i)"><i class="fa fa-close"></i></button>

@@ -1,1 +1,15 @@
-<app-blog></app-blog>>
+<!-- <app-blog></app-blog> -->
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Http Call App</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li routerLink="home"><a>Home</a></li>
+        <li><a  routerLinkActive='active' routerLink="normal">Normal calls</a></li>
+        <li><a  routerLinkActive='active' routerLink="rxjs">RxJS calls</a></li>
+      </ul>
+    </div>
+  </nav>
+<router-outlet></router-outlet>
+
