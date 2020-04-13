@@ -24,4 +24,8 @@ export class DataService {
 
   }
 
+  getGrid(link){
+    return this.http.get(link)
+  }
+
 }

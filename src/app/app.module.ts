@@ -7,6 +7,7 @@ import { BlogComponent } from './blog/blog.component';
 import { HttpClientModule} from '@angular/common/http';
 import { RxjsComponent } from './rxjs/rxjs.component';
 import { HomeComponent } from './home/home.component'
+import { AgGridModule } from 'ag-grid-angular';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { HomeComponent } from './home/home.component'
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AgGridModule.withComponents([])
   ],
   providers: [],
   bootstrap: [AppComponent]

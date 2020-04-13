@@ -14,6 +14,7 @@ export class RxjsComponent implements OnInit {
 
   blogs:[{title:string, content: string, id: string}]
   myData:any=[]
+  gridData=[]
 
   constructor(private dataService : DataService) { }
 
@@ -60,6 +61,18 @@ export class RxjsComponent implements OnInit {
       },
       error=>{
       console.log(error)
+      }
+    )
+  }
+
+  getGridData(){
+    this.dataService.getGrid('https://jsonplaceholder.typicode.com/users').subscribe(
+      response=>{
+        this.gridData.push(response)
+        console.log(response)
+      },
+      error=>{
+        console.log(error)
       }
     )
   }
